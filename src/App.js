@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Topbar from "./components/Topbar/Topbar";
+import Homepage from "./pages/Homepage/Homepage";
+import Login from "./pages/Login/Login";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import Register from "./pages/Register/Register";
+import Settings from "./pages/Settings/Settings";
+import Single from "./pages/Single/Single";
+import Write from "./pages/Write/Write";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const currentUser = true;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+  <Topbar />
+  <Routes>
+    <Route exact path="/" element={<Homepage />} />
+    <Route path="/posts" element={<Homepage />} />
+    <Route path="/register" element={currentUser ? <Homepage /> : <Register />} />
+    <Route path="/login" element={currentUser ? <Homepage /> : <Login />} />
+    <Route path="/post/:id" element={<Single />} />
+    <Route path="/write" element={currentUser ? <Write /> : <Login />} />
+    <Route path="/settings" element={currentUser ? <Settings /> : <Login />} />
+    <Route exact path="/about" element={<About/>}/>
+    <Route exact path="/contact" element={<Contact/>}/>
+  </Routes>
+</Router>
+
   );
 }
 
