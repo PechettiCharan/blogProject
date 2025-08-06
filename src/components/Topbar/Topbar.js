@@ -34,7 +34,9 @@ export default function Topbar() {
               WRITE
             </Link>
           </li>
+          <Link className="link" to='/login'>
           {user && <li className="topListItem">LOGOUT</li>}
+          </Link>
         </ul>
       </div>
       <div className="topRight">
@@ -58,7 +60,7 @@ export default function Topbar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
+        
       </div>
     </div>
   );

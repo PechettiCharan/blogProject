@@ -12,7 +12,9 @@ export default function Homepage() {
       <Header />
       <div className="home">
         <Posts />
+        <div className="sidebar">
         <Sidebar />
+        </div>
       </div>
     </>
   );

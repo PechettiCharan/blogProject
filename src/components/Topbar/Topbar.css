@@ -57,8 +57,33 @@
   cursor: pointer;
 }
 
-.topSearchIcon {
-  font-size: 18px;
-  color: #666;
-  cursor: pointer;
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
+  }
+
+  .topLeft,
+  .topRight,
+  .topCenter {
+    flex: none;
+    width: 100%;
+    justify-content: space-around;
+    margin: 5px 0;
+  }
+
+  .topList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topListItem {
+    margin: 10px 0;
+  }
+
+  .topImg {
+    margin: 0;
+  }
 }

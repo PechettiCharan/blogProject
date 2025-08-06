@@ -28,3 +28,42 @@
   margin-top: 80px;
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .headerTitles{
+    margin-top: 20px;
+  }
+  .headerTitleSm {
+    font-size: 16px;
+    top: 15%;
+  }
+
+  .headerTitleLg {
+    font-size: 50px;
+    top: 18%;
+  }
+
+  .headerImg {
+    height: 250px;
+    margin-top: 60px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headerTitles{
+    margin-top: 20px;
+  }
+  
+  .headerTitleSm {
+    font-size: 14px;
+    top: 12%;
+  }
+
+  .headerTitleLg {
+    font-size: 36px;
+    top: 15%;
+  }
+
+  
+}
